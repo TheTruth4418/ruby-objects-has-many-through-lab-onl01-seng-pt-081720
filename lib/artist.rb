@@ -13,7 +13,7 @@ class Artist
   end
 
   def songs
-
+    Song.find_all{|x| x.artist == self}
   end
 
   def genres
