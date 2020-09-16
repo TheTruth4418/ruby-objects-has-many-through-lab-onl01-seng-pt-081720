@@ -8,7 +8,7 @@ class Patient
     Appointment.new(date,self,doctor)
   end
   def appointments
-    Appointment.detect{|x| x.patient == self}
+    Appointment.all.detect{|x| x.patient == self}
   end
   def self.all
     @@all
