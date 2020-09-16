@@ -15,7 +15,7 @@ class Artist
   end
 
   def genres
-    Genre.all.select{|x| x.artist == self}
+    Genre.all.map{|x| x.genre}
   end
 
   def self.all
