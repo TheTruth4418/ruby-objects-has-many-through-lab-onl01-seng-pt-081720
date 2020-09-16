@@ -10,6 +10,10 @@ end
       Appointment.new(date,patient,self)
   end
 
+  def appointments
+    Appontment.all.select{|x| x.doctor == self}
+  end
+
 def self.all
   @@all
 end
