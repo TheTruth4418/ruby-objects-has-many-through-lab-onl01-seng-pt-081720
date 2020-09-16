@@ -7,11 +7,11 @@ class Genre
   end
 
   def songs
-
+    Song.find_all{|x| x.genre == self}
   end
 
   def artists
-
+    Artist.find_all{|x| x.genre == self}
   end
 
   def self.all
