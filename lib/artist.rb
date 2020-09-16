@@ -13,11 +13,11 @@ class Artist
   end
 
   def songs
-    Song.find_all{|x| x.artist == self}
+    Song.all.find_all{|x| x.artist == self}
   end
 
   def genres
-    Genre.find_all{|x| x.artist == self}
+    Genre.all.find_all{|x| x.artist == self}
   end
 
   def self.all
